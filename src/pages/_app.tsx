@@ -5,20 +5,23 @@ import GlobalStyle from '../styles/global';
 import Header from '../components/Header';
 import Player from '../components/Player';
 import { Wrapper } from '../styles/app';
+import { PlayerProvider } from '../hooks/player';
 
 function MyApp({ Component, pageProps }) {
   return (
     <ThemeProvider theme={theme}>
       <GlobalStyle />
 
-      <Wrapper>
-        <main>
-          <Header />
-          <Component {...pageProps} />
-        </main>
-        
-        <Player />
-      </Wrapper>
+      <PlayerProvider>
+        <Wrapper>
+          <main>
+            <Header />
+            <Component {...pageProps} />
+          </main>
+          
+          <Player />
+        </Wrapper>
+      </PlayerProvider>
     </ThemeProvider>
   )
 }

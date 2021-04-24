@@ -8,6 +8,7 @@ import api from '../services/api';
 
 import { Container, LatestEpisodes, AllEpisodes } from '../styles/pages/home';
 import { convertDurantionToTimeString } from '../utils/convertDurantionToTimeString';
+import { usePlayer } from '../hooks/player';
 
 interface EpisodeProps {
   id: string;
@@ -26,6 +27,8 @@ interface HomeProps {
 }
 
 export default function Home({lastestEpisodes, allEpisodes}: HomeProps) {
+  const { play } = usePlayer();
+
   return (
     <Container>
         <LatestEpisodes>
@@ -52,7 +55,7 @@ export default function Home({lastestEpisodes, allEpisodes}: HomeProps) {
                     <span>{episode.durantionAsString}</span>
                   </div>
 
-                  <button type="button">
+                  <button type="button" onClick={() => { play(episode) }}>
                     <img src="/play-green.svg" alt="Tocar episódio"/>
                   </button>
                 </li>

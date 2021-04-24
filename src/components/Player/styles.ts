@@ -37,6 +37,28 @@ export const Container = styled.div`
     justify-content: center;
   }
 
+  .playingEpisode {
+    text-align: center;
+
+    img {
+      border-radius: 1.5rem;
+    }
+
+    strong {
+      display: block;
+      margin-top: 2rem;
+      line-height: 1.75rem;
+      font: 600 1.25rem Lexend, sans-serif;
+    }
+
+    span {
+      display: block;
+      margin-top: 1rem;
+      opacity: 0.6;
+      line-height: 1.5rem;
+    }
+  }
+
   footer {
     align-self: stretch;
 
@@ -81,14 +103,27 @@ export const Buttons = styled.div`
     background: transparent;
     border: 0;
     font-size: 0;
+    transition: filter 0.2s;
 
+    &:disabled {
+      cursor: default;
+    }
+
+    &:hover:not(:disabled) {
+      filter: brightness(0.7);
+    }
+   
     &.playButton {
       width: 4rem;
       height: 4rem;
       border-radius: 1rem;
       background: ${({ theme }) => theme.colors.purple400};
+
+      &:hover:not(:disabled) {
+        filter: brightness(0.95);
+      }
     }
   }
-  `;
+`;
 
 
