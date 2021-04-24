@@ -63,7 +63,9 @@ export const Container = styled.div`
     align-self: stretch;
 
     &.empty {
-      opacity: 0.5;
+      > div:first-child {
+        opacity: 0.5;
+      }
     }
   }
 `;
@@ -107,6 +109,7 @@ export const Buttons = styled.div`
 
     &:disabled {
       cursor: default;
+      opacity: 0.5;
     }
 
     &:hover:not(:disabled) {
@@ -121,6 +124,14 @@ export const Buttons = styled.div`
 
       &:hover:not(:disabled) {
         filter: brightness(0.95);
+      }
+    }
+
+    &.active {
+      filter: invert(0.35) sepia(1) saturate(3) hue-rotate(100deg);
+
+      &:hover {
+        filter: invert(0.6) sepia(1) saturate(3) hue-rotate(100deg);
       }
     }
   }
