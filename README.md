@@ -37,7 +37,7 @@
 
 ### 💻 Projeto
 
-O Pddcastr é uma aplicação para reprodução dos episódios de um podcast. Esse Projeto foi desenvolvido durante a semana do Next Level Week 5ª Edição. 
+O Podcastr é uma aplicação para reprodução dos episódios de um podcast. Esse Projeto foi desenvolvido durante a semana do Next Level Week 5ª Edição. 
 
 ### ✅ Demonstração
 <img src="https://github.com/gabriel-nt/Podcastr/blob/main/src/assets/home.png" />
