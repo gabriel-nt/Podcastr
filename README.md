@@ -83,6 +83,8 @@ Esse projeto foi utilizou das seguintes lib:
 - Eslint
 - prettier
 - react-dom
+- axios
+- date-fns
 - styled-components
 - rc-slider
 
