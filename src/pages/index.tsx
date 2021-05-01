@@ -89,7 +89,7 @@ export default function Home({ lastestEpisodes, allEpisodes }: HomeProps) {
           <tbody>
             {allEpisodes.map((episode, index) => (
               <tr key={episode.id}>
-                <td style={{ width: 72 }}>
+                <td style={{ width: 72 }} className="td-img">
                   <Image
                     width={120}
                     height={120}

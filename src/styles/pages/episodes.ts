@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled from "styled-components";
 
 export const Container = styled.div`
   max-width: 46rem;
@@ -43,7 +43,7 @@ export const Container = styled.div`
 
   header {
     padding-bottom: 1rem;
-    border-bottom: 1px solid  ${({ theme }) => theme.colors.gray100};
+    border-bottom: 1px solid ${({ theme }) => theme.colors.gray100};
 
     h1 {
       margin-top: 2rem;
@@ -60,7 +60,7 @@ export const Container = styled.div`
         position: relative;
 
         &::before {
-          content: ' ';
+          content: " ";
           width: 4px;
           height: 4px;
           border-radius: 2px;
@@ -82,5 +82,9 @@ export const Container = styled.div`
     p {
       margin: 1.5rem 0;
     }
+  }
+
+  @media screen and (max-width: 1500px) {
+    margin-bottom: 7rem;
   }
 `;

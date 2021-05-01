@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled from "styled-components";
 
 export const Container = styled.div`
   padding: 0 4rem;
@@ -8,6 +8,11 @@ export const Container = styled.div`
   h2 {
     margin-top: 3rem;
     margin-bottom: 1.5rem;
+  }
+
+  @media screen and (max-width: 1500px) {
+    padding: 0 1rem;
+    height: calc(100vh - 250px);
   }
 `;
 
@@ -24,7 +29,7 @@ export const LatestEpisodes = styled.div`
       padding: 1.25rem;
       border-radius: 1.5rem;
       position: relative;
-      
+
       display: flex;
       align-items: center;
 
@@ -37,14 +42,15 @@ export const LatestEpisodes = styled.div`
       div {
         flex: 1;
         margin-left: 1rem;
+        color: ${({ theme }) => theme.colors.purpleDark};
 
         a {
           display: block;
-          color: ${({ theme }) => theme.colors.gray800};
           font-family: Lexend, sans-serif;
           font-weight: 600;
           line-height: 1.4rem;
           text-decoration: none;
+          color: ${({ theme }) => theme.colors.purpleDark};
 
           &:hover {
             text-decoration: underline;
@@ -71,11 +77,11 @@ export const LatestEpisodes = styled.div`
             position: relative;
 
             &::before {
-              content: ' ';
+              content: " ";
               width: 4px;
               height: 4px;
               border-radius: 2px;
-              background: #ddd;
+              background: ${({ theme }) => theme.colors.purpleDark};
               position: absolute;
               left: 0;
               top: 50%;
@@ -108,6 +114,38 @@ export const LatestEpisodes = styled.div`
       }
     }
   }
+
+  @media screen and (max-width: 1500px) {
+    ul {
+      grid-template-columns: 1fr;
+
+      li {
+        div {
+          a {
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+          }
+
+          p {
+            display: -webkit-box;
+            -webkit-line-clamp: 1;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+            max-width: 90%;
+            white-space: unset;
+          }
+        }
+
+        button {
+          top: 50%;
+          right: 0.525rem;
+          transform: translate(50%, -50%);
+        }
+      }
+    }
+  }
 `;
 
 export const AllEpisodes = styled.div`
@@ -116,7 +154,8 @@ export const AllEpisodes = styled.div`
   table {
     width: 100%;
 
-    th, td {
+    th,
+    td {
       padding: 0.75rem 1rem;
       border-bottom: 1px solid ${({ theme }) => theme.colors.gray100};
     }
@@ -154,7 +193,7 @@ export const AllEpisodes = styled.div`
         width: 2rem;
         height: 2rem;
         font-size: 0;
-        border-radius: 0.600rem;
+        border-radius: 0.6rem;
         background: ${({ theme }) => theme.colors.white};
         transition: filter 0.2s;
         border: 1px solid ${({ theme }) => theme.colors.gray100};
@@ -171,4 +210,20 @@ export const AllEpisodes = styled.div`
     }
   }
 
+  @media screen and (max-width: 1500px) {
+    overflow-x: auto;
+    width: 100%;
+
+    table {
+      td {
+        white-space: nowrap;
+
+        &.td-img {
+          > div {
+            width: 65px;
+          }
+        }
+      }
+    }
+  }
 `;
