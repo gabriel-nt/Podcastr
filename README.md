@@ -31,6 +31,7 @@
 - [x] Listagem de episódios do Podcast "FalaDEV"
 - [x] Geração de Páginas Estática
 - [x] Detalhes dos episódios
+- [x] Dark Theme
 - [x] Criação de Player de áudio
 - [x] Criação de todas as funcionalidades do player
 
