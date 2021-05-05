@@ -86,6 +86,7 @@ Esse projeto foi utilizou das seguintes lib:
 - react-dom
 - axios
 - date-fns
+- react-icons
 - styled-components
 - rc-slider
 - json-server
